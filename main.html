@@ -1,121 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  font-family: Sarabun,;
-}
-
-/* Style the header */
-header {
-  background-color: #f68834;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 100%; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="/script.js"></script>
 </head>
-<body>
-<header>
-  <h2>Cities</h2>
-</header>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="/main.html">London</a></li>
-      <li><a href="/paris.html">Paris</a></li>
-      <li><a href="/tokyo.html">Tokyo</a></li>
-    </ul>
-  </nav>
-  
-  <article>
-    <img src="/img/tokyo.jpeg" width="150">
+<body class="box">
+    <div class="box-container">
+      <div class="row header">
+        <h2>Cities | เมือง</h2>
+      </div>
+      <div class="row content">
+        <ul class="navbar">
+        <li><a class="tablink" href="#" onclick="openCity(event, 'London')">London</a></li>
+        <li><a class="tablink" href="#" onclick="openCity(event, 'Paris')">Paris</a></li>
+        <li><a class="tablink" href="#" onclick="openCity(event, 'Tokyo')">Tokyo</a></li>
+      </ul>
+      <div>
+        <div id="Tokyo" class="city" style="display:none">
+          <img src="/img/tokyo.jpeg" width="150">
+          <h1>Tokyo</h1>
+          <p>Tokyo is the capital of Japan.</p>
+          <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+          <h1>โตเกียว</h1>
+          <p>โตเกียวเป็นเมืองหลวงของประเทศญี่ปุ่น</p>
+          <p> เป็นศูนย์กลางของเขตมหานครโตเกียวและเขตเมืองที่มีประชากรมากที่สุดในโลก</p>
+        </div>
 
-    <h1>Tokyo</h1>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-    <h1>โตเกียว</h1>
-    <p>โตเกียวเป็นเมืองหลวงของประเทศญี่ปุ่น</p>
-    <p> เป็นศูนย์กลางของเขตมหานครโตเกียวและเขตเมืองที่มีประชากรมากที่สุดในโลก</p>
-    <hr>
-    <img src="/img/london.jpeg" width="150">
-    <h1>London</h1>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <h1>ลอนดอน</h1>
-    <p>ลอนดอนเป็นเมืองหลวงของอังกฤษ</p>
-    <p>เป็นเมืองที่มีประชากรมากที่สุดในสหราชอาณาจักร โดยมีพื้นที่เมืองที่มีประชากรมากกว่า 13 ล้านคน</p>
-    <hr>
-    <img src="/img/paris.jpeg" width="150">
-    <h1>Paris</h1>
-    <p>Paris is the capital of France.</p> 
-    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-    <h1>ปารีส</h1>
-    <p>ปารีส เป็นเมืองหลวงของฝรั่งเศส</p>
-    <p>พื้นที่ปารีสเป็นหนึ่งในศูนย์ประชากรที่ใหญ่ที่สุดในยุโรป โดยมีประชากรมากกว่า 12 ล้านคน</p>
-  </article>
-</section>
+        <div id="London" class="city" style="display:initial">
+          <img src="/img/london.jpeg" width="150">
+          <h1>London</h1>
+          <p>London is the capital city of England.</p>
+          <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million
+            inhabitants.
+          </p>
+          <h1>ลอนดอน</h1>
+          <p>ลอนดอนเป็นเมืองหลวงของอังกฤษ</p>
+          <p>เป็นเมืองที่มีประชากรมากที่สุดในสหราชอาณาจักร โดยมีพื้นที่เมืองที่มีประชากรมากกว่า 13 ล้านคน</p>
+        </div>
 
-<footer>
-  <p>Footer</p>
-</footer>
-
+        <div id="Paris" class="city" style="display:none">
+          <img src="/img/paris.jpeg" width="150">
+          <h1>Paris</h1>
+          <p>Paris is the capital of France.</p>
+          <p>The Paris area is one of the largest population centers in Europe, with more than 12 million
+            inhabitants.
+          </p>
+          <h1>ปารีส</h1>
+          <p>ปารีส เป็นเมืองหลวงของฝรั่งเศส</p>
+          <p>พื้นที่ปารีสเป็นหนึ่งในศูนย์ประชากรที่ใหญ่ที่สุดในยุโรป โดยมีประชากรมากกว่า 12 ล้านคน</p>
+        </div>
+      </div>
+      </div>
+      <div class="row footer">
+        <p>Footer</p>
+      </div>
+    </div>
 </body>
 </html>
-
