@@ -2,35 +2,42 @@
     display: flex;
     flex-flow: column;
     font-family: Sarabun;
-    background-color: burlywood;
+    background-color: rgb(189, 182, 172);
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0px;
 }
-.box .container{
-    margin: 0;
+
+.box-container{
+    /* padding-bottom: 100%; */
 }
+
 .box .row.header{
-    background-color: rgb(31, 129, 215);
+    background-color: rgb(208, 215, 133);
     text-align: center;
     flex: 0 1 auto;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
 }
+
 .box .row.content {
     display: flex;
     flex-grow: 1; /* This allows the content row to take all available space */
-    background-color: #e65656;
+    background-color: #80babe;
+    padding-bottom: 6%;
 }
 
 .row.content li {
     list-style: none;
     text-align: center;
     flex: 1 1 auto;
+    margin-top: 40%;
 }
 
 .row.content a.tablink {
     display: block;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     width: 100%;
 }
 
@@ -39,11 +46,23 @@
 
 .row.content a.tablink:hover {
     color: orange;
+    
 }
+
 .city {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 100%;
 }
+
 .box .row.footer {
+    position: absolute;
     margin-top: auto;
-    background-color: brown;
+    padding-left: 50%;
+    padding-right: 47.15%;
+    background-color: rgb(255, 255, 255);
     flex: 0 1 40px;
+    bottom: 0px;
+    padding-top: 2%;
 }
