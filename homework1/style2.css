@@ -23,7 +23,7 @@
 .box .row.content {
     display: flex;
     flex-grow: 1; /* This allows the content row to take all available space */
-    background-color: #a8a0a0;
+    background-color: #ba1e1e;
     padding-bottom: 6%;
 }
 

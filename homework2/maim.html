@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload='idk()'>
+    <h1>โปรแกรมคำนวณภาษีเงินได้บุคคลธรรมดา</h1>
+    <div>รายได้(บาท)</div>
+    
+    <input id="a" type="number" min="0" style="display: block;" onchange="idk()">
+    <input id="b" type="number" min="0" style="display: none;" onchange="idk()">
+    <input id="c" type="number" min="0" style="display: none;" onchange="idk()">
+    <button id="btplus" onclick="btAdd()">+</button>
+    <button id="btminus" onclick="btMinus()">-</button>
+
+    <div>รายได้รวม(บาท)</div>
+    <input type="number" id="1" readonly value="">
+    <div>อัตราภาษี(%)</div>
+    <input type="number" id="2" readonly value="">
+    <div>ภาษีที่ต้องจ่าย(บาท)</div>
+    <input type="number" id="3" readonly value="">
+</body>
+</html>
