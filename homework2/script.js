@@ -28,7 +28,13 @@ function btAdd() {
     var x=document.getElementById("1");
     var y=document.getElementById("2");
     var z=document.getElementById("3");
+    if(Number(document.getElementById("a").value)<0 || Number(document.getElementById("b").value)<0 || Number(document.getElementById("c").value)<0){
+        document.getElementById("alert").innerHTML="รายได้ติดลบไม่ได้"
+    }
     var total=Number(document.getElementById("a").value)+Number(document.getElementById("b").value)+Number(document.getElementById("c").value);
+    if(total>=0){
+        document.getElementById("alert").innerHTML=""
+    }
     var tax;
     x.value =total;
     if (total>5000000) {
@@ -52,3 +58,16 @@ function btAdd() {
     y.value=tax
     z.value=tax/100*total;
 }
+function darkMode() {
+    var element = document.body;
+    if(element.style.backgroundColor=="white"){
+        element.style.backgroundColor="black"
+    element.style.color="white"
+    document.getElementById("dmBt").innerHTML="White mode"
+    }else{
+        element.style.backgroundColor="white"
+        element.style.color="black"
+        document.getElementById("dmBt").innerHTML="Dark mode"
+    }
+  }
+  

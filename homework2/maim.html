@@ -10,7 +10,7 @@
 <body onload='idk()'>
     <h1>โปรแกรมคำนวณภาษีเงินได้บุคคลธรรมดา</h1>
     <div>รายได้(บาท)</div>
-    
+    <p id="alert"></p>
     <input id="a" type="number" min="0" style="display: block;" onchange="idk()">
     <input id="b" type="number" min="0" style="display: none;" onchange="idk()">
     <input id="c" type="number" min="0" style="display: none;" onchange="idk()">
@@ -23,5 +23,6 @@
     <input type="number" id="2" readonly value="">
     <div>ภาษีที่ต้องจ่าย(บาท)</div>
     <input type="number" id="3" readonly value="">
+    <button id="dmBt" onclick="darkMode()">Dark mode</button>
 </body>
 </html>
